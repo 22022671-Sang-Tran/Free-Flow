@@ -5,7 +5,7 @@ from Line.Line import Line
 from Constant.Constant import *
 pygame.init()
 
-# Initialize Pygame
+# Khởi tạo màn hình
 clock = pygame.time.Clock()
 
 class Game:
