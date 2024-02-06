@@ -1,8 +1,11 @@
-Về project
+# Về project
+
 Tạo một trò chơi giống như Trò Free Flow
+
 ![alt text](image.png)
 
 Các việc cần làm
+
 1 Tạo game:
 
   Chơi đc
