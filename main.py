@@ -1,7 +1,6 @@
 import pygame
 import sys
 from Dot.Dot import Dot
-from Line.Line import Line
 from Constant.Constant import *
 pygame.init()
 
