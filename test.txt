@@ -1,6 +1,9 @@
-5 5
-R  R     
-Y  BY   
-B       
-G       
-    G
+8 8
+xBxxxxxR
+xOxxxxGx
+xxxxCxPx
+xxxPxxRx
+xxxBYxxx
+xOGxxxYx
+xxxxCxxx
+VxxxxxxV
