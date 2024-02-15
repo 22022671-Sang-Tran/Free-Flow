@@ -21,6 +21,10 @@ with open(level_file_path, 'r') as file:
 # Create the Pygame display window
 screen = pygame.display.set_mode((num_cols * CELL_SIZE, num_rows * CELL_SIZE))
 
+is_dragging = False
+start_dot = None
+end_dot = None
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -30,10 +34,17 @@ while True:
             mouse_pos = pygame.mouse.get_pos()
             col = mouse_pos[0] // CELL_SIZE
             row = mouse_pos[1] // CELL_SIZE
+            clicked_dot = None
+            for dot in game.dots:
+                if dot.col == col and dot.row == row:
+                    clicked_dot = dot
+                    break
+            if clicked_dot:
+                print(f"{col} and {row} \n")
 
     screen.fill(BLACK)
     game.draw_grid(screen)
-    #game.draw_lines()
+    # game.draw_lines()
     game.draw_dots(screen)
 
     pygame.display.flip()
