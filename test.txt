@@ -1,9 +1,9 @@
 8 8
-xBxxxxxR
-xOxxxxGx
-xxxxCxPx
-xxxPxxRx
-xxxBYxxx
-xOGxxxYx
-xxxxCxxx
-VxxxxxxV
+.B.....R
+.O....G.
+....C.P.
+...P..R.
+...BY...
+.OG...Y.
+....C...
+V......V

@@ -1,7 +1,24 @@
-from Constant.Constant import *
 from Dot.Dot import *
+
+
+def get_color(char):
+    color_mapping = {
+        'R': RED,
+        'G': GREEN,
+        'B': BLUE,
+        'Y': YELLOW,
+        'C': CYAN,
+        'O': ORANGE,
+        'V': VIOLET,
+        'P': PINK
+    }
+    return color_mapping.get(char)
+
+
 class Game:
     def __init__(self, level_file):
+        self.num_rows = None
+        self.num_cols = None
         self.dots = []
         self.lines = []
         self.load_level(level_file)
@@ -16,29 +33,16 @@ class Game:
 
         for row in range(self.num_rows):
             for col, char in enumerate(lines[row + 1].strip()):
-                if char != 'x':
-                    color = self.get_color(char)
+                if char != '.':
+                    color = get_color(char)
                     if color:
                         self.dots.append(Dot(row, col, color))
 
-    def get_color(self, char):
-        color_mapping = {
-            'R': RED,
-            'G': GREEN,
-            'B': BLUE,
-            'Y': YELLOW,
-            'C': CYAN,
-            'O': ORANGE,
-            'V': VIOLET,
-            'P': PINK
-        }
-        return color_mapping.get(char)
-
-    def draw_grid(self,screen):
+    def draw_grid(self, screen):
         for row in range(self.num_rows):
             for col in range(self.num_cols):
                 pygame.draw.rect(screen, WHITE, (col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE), 1)
 
-    def draw_dots(self,screen):
+    def draw_dots(self, screen):
         for dot in self.dots:
             dot.draw(screen)

@@ -1,0 +1,7 @@
+File game nên là một file .txt chứa những thành phần sau:
+    Dòng đầu tiên gồm 2 số nguyên dương của grid là số cột và số hàng
+    Các dòng tiếp theo là mô tả trò chơi:
+        Dấu '.' là nơi có ô trống
+        Các chữ cái in hoa là các điểm màu dựa theo Constant.py
+        Ta dùng chữ cái in thường để làm đường nối
+
